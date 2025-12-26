@@ -1,14 +1,10 @@
 import React from "react";
 import { NavBar } from "./nav-bar";
-import { Button } from "../ui/button";
 import { RoundedShape } from "./rounded-shape";
 import { HighlightedText } from "./HighlightedText";
 import { ContactSection } from "./contact-section";
 
-export const FooterWrapper = ({
-  className,
-  ...props
-}: React.ComponentProps<"footer">) => {
+export const FooterWrapper = ({ ...props }: React.ComponentProps<"footer">) => {
   return (
     <footer className="flex flex-col  gap-4 max-w-5xl mx-auto" {...props} />
   );

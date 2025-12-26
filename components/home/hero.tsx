@@ -1,6 +1,7 @@
 import React from "react";
 import { RoundedShape } from "../share/rounded-shape";
 import Image from "next/image";
+import { LinkButtonCustom } from "../share/button-custom";
 
 /* cspell:disable */
 
@@ -31,13 +32,16 @@ export const Hero = () => {
             className="object-contain opacity-5"
           />
 
-          <div className="pointer-events-none max-w-2xl">
+          <div className="pointer-events-none max-w-2xl flex flex-col">
             <h2 className="text-white text-5xl font-bold  leading-tight max-w-2xl">
               Derecho a vivir seguras siempre
             </h2>
             <h4 className="text-3xl text-white opacity-80">
               Alerta de Violencia de Género contra las Mujeres
             </h4>
+            <div className="mt-4">
+              <LinkButtonCustom text="Más Información" href="#about-vgm" />
+            </div>
           </div>
         </div>
       </RoundedShape>

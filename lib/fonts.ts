@@ -3,6 +3,7 @@ import {
   Geist,
   Geist_Mono,
   Montserrat,
+  Bebas_Neue,
 } from "next/font/google";
 
 export const montserrat = Montserrat({
@@ -25,4 +26,10 @@ const bricolageGrotesque = Bricolage_Grotesque({
   variable: "--font-bricolage-grotesque",
   subsets: ["latin"],
 });
-export { geistSans, geistMono, bricolageGrotesque };
+
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas-neue",
+  weight: ["400"],
+  subsets: ["latin"],
+});
+export { geistSans, geistMono, bricolageGrotesque, bebasNeue };
