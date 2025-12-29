@@ -40,7 +40,7 @@ export const Municipalities = () => {
             </h3>
             {idx !== municipalities.length - 1 && (
               <span
-                className={`text-5xl font-semibold text-secondary-custom uppercase tracking-tight ${bebasNeue.className}`}
+                className={`text-2xl md:text-5xl font-semibold text-secondary-custom uppercase tracking-tight ${bebasNeue.className}`}
               >
                 |{" "}
               </span>

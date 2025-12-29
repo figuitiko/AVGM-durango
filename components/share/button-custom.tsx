@@ -41,7 +41,7 @@ const LinkButtonCustom = ({
   return (
     <ButtonCustom asChild className={className}>
       <Link href={href}>
-        <span className="uppercase font-bebas-neue tracking-tighter text-2xl">
+        <span className="uppercase font-bebas-neue tracking-tighter text-lg  md:text-2xl">
           {text}
         </span>
       </Link>

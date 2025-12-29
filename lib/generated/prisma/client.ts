@@ -50,7 +50,7 @@ export type User = Prisma.UserModel
  */
 export type Document = Prisma.DocumentModel
 /**
- * Model Category
+ * Model Link
  * 
  */
-export type Category = Prisma.CategoryModel
+export type Link = Prisma.LinkModel

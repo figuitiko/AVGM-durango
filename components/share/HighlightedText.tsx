@@ -7,7 +7,7 @@ export const HighlightedText = ({
 }) => {
   return (
     <div className="flex justify-center">
-      <h2 className="text-5xl font-bold flex gap-1 items-center">
+      <h2 className="text-3xl md:text-5xl font-bold flex gap-1 items-center">
         <span className="text-fourth">{text1}</span>
         <span className="text-third">{text2}</span>
       </h2>

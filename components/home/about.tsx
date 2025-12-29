@@ -3,18 +3,20 @@ import Image from "next/image";
 
 import { ButtonCustom } from "../share/button-custom";
 import Link from "next/link";
+import { bebasNeue } from "@/lib/fonts";
 
 export const About = () => {
   return (
-    <section className="flex">
+    <section id="about" className="flex md:flex-row flex-col">
       <div className="flex flex-col flex-1 py-8 gap-4">
-        <div>
-          <h2 className="uppercase text-4xl text-eighth font-bebas-neue tracking-tighter">
-            Acerca de
-          </h2>
-        </div>
+        <h2
+          className={`uppercase text-4xl text-eighth  tracking-tighter text-center md:text-left ${bebasNeue.className}`}
+        >
+          Acerca de
+        </h2>
+
         <div className="flex flex-col gap-6 items-center justify-center flex-1 max-w-119">
-          <h2 className="text-third text-7xl  text-center font-bold">
+          <h2 className="text-third text-3xl md:text-5xl  text-center font-bold">
              ¿Qué es la AVGM? 
           </h2>
           <p className="text-center font-semibold text-[22px] text-secondary-custom">
@@ -25,8 +27,8 @@ export const About = () => {
           </p>
 
           <ButtonCustom asChild>
-            <Link href="/about-municipios">
-              <span className="uppercase font-bebas-neue tracking-tighter text-2xl">
+            <Link href="/maps">
+              <span className="uppercase font-bebas-neue tracking-tighter text-lg md:text-2xl">
                 ver municipios vgm
               </span>
             </Link>
@@ -35,15 +37,15 @@ export const About = () => {
       </div>
       <RoundedShape
         color="fifth"
-        className="items-center flex-row text-center gap-0 p-0 flex-1"
+        className="items-center flex-row text-center gap-0 p-0! flex-1 hidden md:flex"
       >
-        <picture className="relative flex-1 min-h-150  w-full overflow-hidden">
+        <picture className="relative flex-1 min-h-96  w-full ">
           <Image
             src="/images/about.png"
             alt="About Image"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="absolute rotate-y-180 object-contain object-bottom scale-110 top-44! -left-25!"
+            className="absolute rotate-y-180 object-contain object-bottom scale-150 top-24! -left-25!"
           />
         </picture>
       </RoundedShape>

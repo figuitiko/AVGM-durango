@@ -1,15 +1,16 @@
 "use client";
 import Link from "next/link";
-import * as React from "react";
+
 import { cn } from "@/lib/utils";
 import { logout } from "@/auth/auth";
+import { useState } from "react";
 
 type SidebarProps = {
   className?: string;
 };
 
 export default function Sidebar({ className }: SidebarProps) {
-  const [isLoggingOut, setIsLoggingOut] = React.useState(false);
+  const [isLoggingOut, setIsLoggingOut] = useState(false);
 
   async function handleLogout() {
     setIsLoggingOut(true);
@@ -38,7 +39,23 @@ export default function Sidebar({ className }: SidebarProps) {
               href="/"
               className="block px-3 py-2.5 rounded-lg no-underline"
             >
-              Home
+              Inicio
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/dashboard/change-password"
+              className="block px-3 py-2.5 rounded-lg no-underline"
+            >
+              Cambiar Contraseña
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/dashboard/links"
+              className="block px-3 py-2.5 rounded-lg no-underline"
+            >
+              Vinculos
             </Link>
           </li>
         </ul>
@@ -51,7 +68,7 @@ export default function Sidebar({ className }: SidebarProps) {
           disabled={isLoggingOut}
           className="w-full px-3 py-2.5 rounded-lg border border-black/20 bg-white text-left cursor-pointer disabled:cursor-not-allowed disabled:bg-black/5"
         >
-          {isLoggingOut ? "Logging out…" : "Logout"}
+          {isLoggingOut ? "Saliendo…" : "Salir"}
         </button>
       </div>
     </aside>
