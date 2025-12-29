@@ -6,7 +6,7 @@ import { FolderOpen } from "lucide-react";
 import { YearSection } from "./year-section";
 import { CategoryTabs } from "./category-tabs";
 import { DocumentCategory } from "@/types/documents";
-import { documents } from "./mock";
+
 import { RoundedShape } from "../share/rounded-shape";
 
 export const DocumentLibrary = ({
@@ -32,27 +32,24 @@ export const DocumentLibrary = ({
   );
 
   const documentsByYear = useMemo(() => {
-    const grouped: Record<number, typeof documents> = {};
-    filteredDocuments.forEach((doc) => {
-      if (!grouped[doc.year]) {
-        grouped[doc.year] = [];
-      }
-      grouped[doc.year].push(doc);
-    });
+    const grouped: Record<string, Document[]> = {};
+
+    for (const doc of filteredDocuments) {
+      const yearKey = String(doc.year);
+      (grouped[yearKey] ??= []).push(doc);
+    }
 
     // Sort documents within each year by date (newest first)
-    Object.keys(grouped).forEach((year) => {
-      grouped[Number(year)].sort(
-        (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-      );
-    });
+    for (const docs of Object.values(grouped)) {
+      docs.sort((a, b) => Number(b.year) - Number(a.year));
+    }
 
     return grouped;
   }, [filteredDocuments]);
 
-  const sortedYears = Object.keys(documentsByYear)
-    .map(Number)
-    .sort((a, b) => b - a);
+  const sortedYears = Object.keys(documentsByYear).sort(
+    (a, b) => Number(b) - Number(a)
+  );
 
   return (
     <RoundedShape className="min-h-screen bg-background">
@@ -84,7 +81,7 @@ export const DocumentLibrary = ({
           sortedYears.map((year, index) => (
             <YearSection
               key={year}
-              year={year}
+              year={Number(year)}
               documents={documentsByYear[year]}
               defaultOpen={index === 0}
             />
