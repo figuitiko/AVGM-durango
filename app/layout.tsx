@@ -4,8 +4,8 @@ import { bricolageGrotesque } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
-  title: "VGM Durango",
-  description: "VGM Durango website",
+  title: "AVGM Durango",
+  description: "AVGM Durango website",
 };
 
 export default function RootLayout({
