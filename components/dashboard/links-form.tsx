@@ -43,38 +43,38 @@ export function LinksForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4 max-w-5xl w-full">
       <div className="space-y-2">
-        <Label htmlFor="title">Title</Label>
+        <Label htmlFor="title">Titulo</Label>
         <Input
           id="title"
           name="title"
           value={formData.title}
           onChange={handleChange}
-          placeholder="Enter link title"
+          placeholder="Entre el titulo del link"
           required
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="description">Description</Label>
+        <Label htmlFor="description">Entre la Descripción</Label>
         <Textarea
           id="description"
           name="description"
           value={formData.description}
           onChange={handleChange}
-          placeholder="Enter link description"
+          placeholder="Entre la Descripción"
           rows={3}
         />
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="url">URL</Label>
+        <Label htmlFor="url">Liga</Label>
         <Input
           id="url"
           name="url"
           type="url"
           value={formData.url}
           onChange={handleChange}
-          placeholder="https://example.com"
+          placeholder="https://ejemplo.com"
           required
         />
       </div>

@@ -65,7 +65,7 @@ export default function ChangePassword() {
 
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="space-y-2">
-          <Label htmlFor="current-password">Current Password</Label>
+          <Label htmlFor="current-password">Contreseña actual</Label>
           <Input
             id="current-password"
             type="password"
@@ -77,7 +77,7 @@ export default function ChangePassword() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="new-password">New Password</Label>
+          <Label htmlFor="new-password">Nueva contraseña</Label>
           <Input
             id="new-password"
             name="newPassword"
@@ -89,7 +89,7 @@ export default function ChangePassword() {
         </div>
 
         <div className="space-y-2">
-          <Label htmlFor="confirm-password">Confirm New Password</Label>
+          <Label htmlFor="confirm-password">Confirmar nueva contraseña</Label>
           <Input
             id="confirm-password"
             type="password"
@@ -103,7 +103,7 @@ export default function ChangePassword() {
           type="submit"
           className="inline-flex items-center justify-center rounded-lg border border-black/15 bg-white px-3 py-2 text-sm text-third font-medium hover:bg-black/5"
         >
-          {isLoading ? "Changing Password..." : "Change Password"}
+          {isLoading ? "Cambiando contraseña..." : "Cambiar contraseña"}
         </Button>
       </form>
     </div>

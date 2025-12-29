@@ -56,7 +56,7 @@ export const TableData = ({
             {headers.map((header, cellIndex) => (
               <TableCell
                 key={cellIndex}
-                className={`${
+                className={`max-w-75  truncate ${
                   cellIndex === headers.length - 1 && "text-right"
                 }`}
               >
